@@ -1,0 +1,2 @@
+who -b
+uptime -s
