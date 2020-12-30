@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+
+\title{OS9-Rastegarmoghadam}
+\maketitle
+\author{Maryam Rastegar Moghadam }
+
+\begin{document}
+\maketitle
+\section{UX design is the process of designing (digital or physical) products that are useful, easy to use, and delightful to interact with.}
+\section{wireframe}
+\includegraphics[width=11cm]{wireframe.jpg}
+\label{fig:my-label}
+
+\begin{table}[h!]
+\begin{center}
+\caption{table}
+\label{tab:tabel1}
+
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{1} & \textbf{2} & \textbf{3} & 
+    \hline
+  \textbf{4} & \textbf{5} & \textbf{6} & 
+    \hline
+      \textbf{7} & \textbf{8} & \textbf{9} & 
+\hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\section{formulas}
+ $$e=\sum_{n=0}^{\infty} \frac{1}{n!}.$$
+ 
+
+
+\section{code(add 2 matrix)}
+\begin{lstlisting}
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int r, c, a[100][100], b[100][100], sum[100][100], i, j;
+
+    cout << "Enter number of rows (between 1 and 100): ";
+    cin >> r;
+
+    cout << "Enter number of columns (between 1 and 100): ";
+    cin >> c;
+
+    cout << endl << "Enter elements of 1st matrix: " << endl;
+
+    // Storing elements of first matrix entered by user.
+    for(i = 0; i < r; ++i)
+       for(j = 0; j < c; ++j)
+       {
+           cout << "Enter element a" << i + 1 << j + 1 << " : ";
+           cin >> a[i][j];
+       }
+
+    // Storing elements of second matrix entered by user.
+    cout << endl << "Enter elements of 2nd matrix: " << endl;
+    for(i = 0; i < r; ++i)
+       for(j = 0; j < c; ++j)
+       {
+           cout << "Enter element b" << i + 1 << j + 1 << " : ";
+           cin >> b[i][j];
+       }
+
+    // Adding Two matrices
+    for(i = 0; i < r; ++i)
+        for(j = 0; j < c; ++j)
+            sum[i][j] = a[i][j] + b[i][j];
+
+    // Displaying the resultant sum matrix.
+    cout << endl << "Sum of two matrix is: " << endl;
+    for(i = 0; i < r; ++i)
+        for(j = 0; j < c; ++j)
+        {
+            cout << sum[i][j] << "  ";
+            if(j == c - 1)
+                cout << endl;
+        }
+
+    return 0;
+}
+
+
+\end{lstlisting}
+\end{document}
